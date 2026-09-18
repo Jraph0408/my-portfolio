@@ -4,4 +4,4 @@
 - [x] Use John's supplied portrait in the opening section
 - [x] Add services, work experience, previous works, skills, and contact sections
 - [x] Use John's name as the logo
-- [ ] Verify the portfolio on desktop and mobile
+- [x] Verify the portfolio on desktop and mobile
