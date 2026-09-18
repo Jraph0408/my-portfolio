@@ -9,4 +9,4 @@
 - [x] Remove the gray portrait background and use a transparent cutout
 - [x] Add current independent n8n automation work to the experience timeline
 - [x] Feature the customer inquiry and Discord bot workflow case studies
-- [ ] Verify the updated automation-focused portfolio on desktop and mobile
+- [x] Verify the updated automation-focused portfolio on desktop and mobile
