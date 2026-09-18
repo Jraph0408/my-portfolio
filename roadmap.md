@@ -5,3 +5,8 @@
 - [x] Add services, work experience, previous works, skills, and contact sections
 - [x] Use John's name as the logo
 - [x] Verify the portfolio on desktop and mobile
+- [x] Reposition the hero and services around n8n workflow and AI automation
+- [x] Remove the gray portrait background and use a transparent cutout
+- [x] Add current independent n8n automation work to the experience timeline
+- [x] Feature the customer inquiry and Discord bot workflow case studies
+- [ ] Verify the updated automation-focused portfolio on desktop and mobile
