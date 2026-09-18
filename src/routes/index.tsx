@@ -4,6 +4,7 @@ import {
   ArrowUpRight,
   BadgeCheck,
   Bot,
+  Briefcase,
   CheckCircle2,
   GitBranch,
   Linkedin,
@@ -329,6 +330,7 @@ function Portfolio() {
             <a href="mailto:jraph5295@gmail.com"><Mail aria-hidden="true" /><span><small>EMAIL</small>jraph5295@gmail.com</span><ArrowUpRight /></a>
             <a href="tel:+639162306072"><Phone aria-hidden="true" /><span><small>PHONE</small>0916-230-6072</span><ArrowUpRight /></a>
             <a href="https://linkedin.com/in/john-raphael-de-castro" target="_blank" rel="noreferrer"><Linkedin aria-hidden="true" /><span><small>LINKEDIN</small>john-raphael-de-castro</span><ArrowUpRight /></a>
+            <a href="https://www.upwork.com/freelancers/~01e531613a575f9769" target="_blank" rel="noreferrer"><Briefcase aria-hidden="true" /><span><small>UPWORK</small>John Raphael C. De Castro</span><ArrowUpRight /></a>
           </div>
         </div>
         <div className="footer-line"><span className="wordmark"><span>JOHN</span> RAPHAEL <strong>DE CASTRO</strong></span><p>© 2026 · AUTOMATING WHAT MATTERS.</p></div>
