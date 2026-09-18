@@ -4,33 +4,36 @@ import {
   ArrowUpRight,
   BadgeCheck,
   Bot,
-  Braces,
-  Bug,
   CheckCircle2,
+  GitBranch,
   Linkedin,
   Mail,
+  MessageSquareMore,
   Phone,
   ShieldCheck,
   Sparkles,
   TerminalSquare,
   TestTube2,
   Users,
+  Webhook,
 } from "lucide-react";
-import portraitAsset from "../assets/john-raphael-de-castro.jpg.asset.json";
+import portrait from "../assets/john-raphael-transparent.png";
+import customerInquiryOverview from "../assets/customer-inquiry-workflow-overview.pdf.asset.json";
+import discordBotOverview from "../assets/granblue-relink-discord-build-bot-overview.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "John Raphael C. De Castro | QA Engineer & Test Analyst" },
+      { title: "John Raphael C. De Castro | n8n Workflow & AI Automation" },
       {
         name: "description",
         content:
-          "Portfolio of John Raphael C. De Castro, a Test Analyst and QA Engineer specializing in manual, automation, API, and workflow testing.",
+          "Portfolio of John Raphael C. De Castro, an n8n workflow and AI automation specialist building practical systems, integrations, and reliable business processes.",
       },
-      { property: "og:title", content: "John Raphael C. De Castro | QA Engineer" },
+      { property: "og:title", content: "John Raphael C. De Castro | n8n Automation Specialist" },
       {
         property: "og:description",
-        content: "QA engineering, test automation, enterprise delivery, and selected projects.",
+        content: "n8n workflow automation, AI-assisted systems, integrations, and selected projects.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -41,32 +44,42 @@ export const Route = createFileRoute("/")({
 
 const services = [
   {
-    icon: TestTube2,
-    number: "01",
-    title: "Manual & Functional Testing",
-    text: "Thorough exploratory, functional, regression, and integration testing for complex enterprise workflows.",
-  },
-  {
-    icon: Braces,
-    number: "02",
-    title: "Test Automation",
-    text: "Maintainable automated coverage with Jest, WebDriverIO, Appium, JavaScript, and TypeScript.",
-  },
-  {
-    icon: TerminalSquare,
-    number: "03",
-    title: "API Validation",
-    text: "Reliable API and data validation using Postman and MongoDB, from happy paths to boundary conditions.",
-  },
-  {
     icon: Bot,
-    number: "04",
+    number: "01",
     title: "Workflow & AI Automation",
-    text: "Practical n8n and AI-assisted workflows that remove repetitive tasks and improve delivery speed.",
+    text: "End-to-end n8n systems that connect tools, route information, automate decisions, and keep repetitive work moving.",
+  },
+  {
+    icon: GitBranch,
+    number: "02",
+    title: "Process Design & Optimization",
+    text: "Clear, resilient workflows with branching logic, deduplication, escalation paths, retries, and error handling.",
+  },
+  {
+    icon: Webhook,
+    number: "03",
+    title: "API & App Integrations",
+    text: "Secure connections across webhooks, Google Workspace, Slack, Discord, email, and external services.",
+  },
+  {
+    icon: TestTube2,
+    number: "04",
+    title: "Quality Assurance",
+    text: "QA discipline applied to every automation through scenario testing, validation, monitoring, and dependable handoffs.",
   },
 ];
 
 const experience = [
+  {
+    dates: "2026 — PRESENT",
+    role: "Workflow & AI Automation Builder",
+    company: "Independent Projects · n8n",
+    details: [
+      "Designing n8n workflows for operational intake, priority routing, duplicate prevention, and timed escalation.",
+      "Building webhook-driven integrations for Discord, Google Sheets, Slack, and email with secure validation and failure handling.",
+      "Applying a QA-first approach to workflow logic, edge cases, monitoring, and production readiness.",
+    ],
+  },
   {
     dates: "OCT 2022 — AUG 2026",
     role: "Test Analyst",
@@ -109,6 +122,24 @@ const experience = [
 const projects = [
   {
     index: "01",
+    icon: MessageSquareMore,
+    category: "N8N · OPERATIONS & SUPPORT · DRAFT",
+    title: "Customer Inquiry Intake & Escalation",
+    text: "An n8n workflow that detects duplicate inquiries, assigns priority, logs new requests, notifies the team, and escalates unresolved cases.",
+    tags: ["n8n", "Google Sheets", "Slack", "Email"],
+    href: customerInquiryOverview.url,
+  },
+  {
+    index: "02",
+    icon: Bot,
+    category: "N8N · DISCORD AUTOMATION · ACTIVE",
+    title: "Granblue Relink Discord Build Bot",
+    text: "A verified Discord slash-command workflow that finds build guides from Google Sheets, handles typos, and returns chunked replies within platform limits.",
+    tags: ["n8n", "Discord", "Webhooks", "Fuzzy Matching"],
+    href: discordBotOverview.url,
+  },
+  {
+    index: "03",
     icon: ShieldCheck,
     category: "ENTERPRISE IDENTITY",
     title: "Windows Hello for Business",
@@ -116,7 +147,7 @@ const projects = [
     tags: ["PowerShell", "Azure DevOps", "IAM"],
   },
   {
-    index: "02",
+    index: "04",
     icon: BadgeCheck,
     category: "FINANCIAL PLATFORM",
     title: "1040 Exchange",
@@ -124,7 +155,7 @@ const projects = [
     tags: ["Functional QA", "Regression", "API"],
   },
   {
-    index: "03",
+    index: "05",
     icon: Sparkles,
     category: "ENTERPRISE WEB",
     title: "Accenture.com",
@@ -134,21 +165,28 @@ const projects = [
 ];
 
 const skills = [
+  "n8n",
+  "Workflow Design",
+  "AI Automation",
+  "Webhooks",
+  "Google Sheets",
+  "Slack",
+  "Discord",
+  "Error Handling",
+  "Process Mapping",
+  "API Integration",
+  "JavaScript",
+  "TypeScript",
   "Manual Testing",
   "Regression Testing",
   "API Testing",
   "Jest",
   "WebDriverIO",
   "Appium",
-  "n8n",
   "Azure DevOps",
   "Postman",
   "MongoDB",
-  "JavaScript",
-  "TypeScript",
   "PowerShell",
-  "Sitecore",
-  "SAFe",
 ];
 
 function SectionLabel({ children }: { children: string }) {
@@ -181,10 +219,10 @@ function Portfolio() {
       <main id="top" className="page-frame">
         <section className="hero glass-panel">
           <div className="hero-copy">
-            <p className="eyebrow"><span /> QA ENGINEER · TEST ANALYST</p>
-            <h1>QUALITY<br />BEFORE<br /><em>RELEASE.</em></h1>
+            <p className="eyebrow"><span /> N8N WORKFLOW · AI AUTOMATION</p>
+            <h1>SMARTER<br />WORKFLOWS.<br /><em>LESS WORK.</em></h1>
             <p className="intro">
-              I test enterprise software, automate repeatable checks, and build dependable workflows that help teams ship with confidence.
+              I build reliable n8n workflows and AI-assisted automations that connect tools, remove repetitive work, and keep operations moving.
             </p>
             <div className="hero-actions">
               <a className="primary-action" href="#work">View my work <ArrowDown aria-hidden="true" /></a>
@@ -193,7 +231,7 @@ function Portfolio() {
           </div>
           <div className="portrait-wrap">
             <div className="portrait-halo" />
-            <img src={portraitAsset.url} alt="John Raphael C. De Castro" />
+            <img src={portrait} alt="John Raphael C. De Castro" />
             <span className="portrait-caption">BASED IN THE PHILIPPINES · AVAILABLE WORLDWIDE</span>
           </div>
         </section>
@@ -208,8 +246,8 @@ function Portfolio() {
 
         <section id="services" className="content-section">
           <div className="section-heading">
-            <div><SectionLabel>SERVICES & EXPERTISE</SectionLabel><h2>How I strengthen<br />every release.</h2></div>
-            <p>End-to-end quality support grounded in careful analysis, useful automation, and clear collaboration.</p>
+            <div><SectionLabel>SERVICES & EXPERTISE</SectionLabel><h2>Automation that<br />does the busywork.</h2></div>
+            <p>Practical n8n systems designed around real operations, dependable integrations, and clear outcomes.</p>
           </div>
           <div className="service-grid">
             {services.map(({ icon: Icon, ...service }) => (
@@ -225,8 +263,8 @@ function Portfolio() {
           <SectionLabel>WORK EXPERIENCE</SectionLabel>
           <div className="experience-layout">
             <div className="experience-intro">
-              <h2>Built across<br />quality & code.</h2>
-              <p>A career spanning quality assurance, identity systems, enterprise websites, and release delivery.</p>
+              <h2>Built across<br />automation & quality.</h2>
+              <p>Current n8n automation work supported by years of quality assurance, development, and enterprise delivery experience.</p>
               <div className="education glass-panel">
                 <span>EDUCATION</span>
                 <strong>BS Information Technology</strong>
@@ -250,7 +288,7 @@ function Portfolio() {
         <section id="work" className="content-section">
           <div className="section-heading compact">
             <div><SectionLabel>PREVIOUS WORKS</SectionLabel><h2>Selected projects.</h2></div>
-            <p>Enterprise work where accuracy, security, and dependable delivery mattered.</p>
+            <p>n8n automations and enterprise systems built around useful logic, accuracy, security, and dependable delivery.</p>
           </div>
           <div className="project-grid">
             {projects.map(({ icon: Icon, ...project }) => (
@@ -262,6 +300,7 @@ function Portfolio() {
                 <div className="project-body">
                   <p className="project-category">{project.category}</p><h3>{project.title}</h3><p>{project.text}</p>
                   <div className="tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+                  {project.href ? <a className="case-study-link" href={project.href} target="_blank" rel="noreferrer">View workflow overview <ArrowUpRight aria-hidden="true" /></a> : null}
                 </div>
               </article>
             ))}
@@ -269,7 +308,7 @@ function Portfolio() {
         </section>
 
         <section className="skills-section glass-panel">
-          <div><SectionLabel>CORE SKILLS</SectionLabel><h2>Tools I trust.<br />Standards I keep.</h2></div>
+          <div><SectionLabel>CORE SKILLS</SectionLabel><h2>Systems I connect.<br />Standards I keep.</h2></div>
           <div className="skill-cloud">{skills.map((skill) => <span key={skill}><CheckCircle2 aria-hidden="true" />{skill}</span>)}</div>
           <div className="certs">
             <strong><Users aria-hidden="true" /> Certified & qualified</strong>
@@ -282,8 +321,8 @@ function Portfolio() {
         <div className="contact-inner">
           <div>
             <SectionLabel>CONTACT</SectionLabel>
-            <h2>LET&apos;S BUILD<br />SOMETHING<br /><em>DEPENDABLE.</em></h2>
-            <p>Need careful testing, useful automation, or a quality partner for your next release? Let&apos;s connect.</p>
+            <h2>LET&apos;S AUTOMATE<br />WHAT SLOWS<br /><em>YOU DOWN.</em></h2>
+            <p>Have a repetitive process, disconnected tools, or an automation idea? Let&apos;s build a dependable n8n workflow around it.</p>
           </div>
           <div className="contact-card glass-panel">
             <span>GET IN TOUCH</span>
@@ -292,7 +331,7 @@ function Portfolio() {
             <a href="https://linkedin.com/in/john-raphael-de-castro" target="_blank" rel="noreferrer"><Linkedin aria-hidden="true" /><span><small>LINKEDIN</small>john-raphael-de-castro</span><ArrowUpRight /></a>
           </div>
         </div>
-        <div className="footer-line"><span className="wordmark"><span>JOHN</span> RAPHAEL <strong>DE CASTRO</strong></span><p>© 2026 · TESTING WHAT MATTERS.</p></div>
+        <div className="footer-line"><span className="wordmark"><span>JOHN</span> RAPHAEL <strong>DE CASTRO</strong></span><p>© 2026 · AUTOMATING WHAT MATTERS.</p></div>
       </footer>
     </div>
   );
