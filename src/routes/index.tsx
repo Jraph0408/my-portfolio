@@ -128,7 +128,7 @@ const projects = [
     title: "Customer Inquiry Intake & Escalation",
     text: "An n8n workflow that detects duplicate inquiries, assigns priority, logs new requests, notifies the team, and escalates unresolved cases.",
     tags: ["n8n", "Google Sheets", "Slack", "Email"],
-    href: customerInquiryOverview.url,
+    href: "https://github.com/Jraph0408/my-portfolio/blob/main/assets/Customer%20Inquiry%20Intake%20%26%20Escalation%20-%20Workflow%20Overview.pdf",
   },
   {
     index: "02",
@@ -137,7 +137,7 @@ const projects = [
     title: "Granblue Relink Discord Build Bot",
     text: "A verified Discord slash-command workflow that finds build guides from Google Sheets, handles typos, and returns chunked replies within platform limits.",
     tags: ["n8n", "Discord", "Webhooks", "Fuzzy Matching"],
-    href: discordBotOverview.url,
+    href: "https://github.com/Jraph0408/my-portfolio/blob/main/assets/Granblue%20Relink%20Discord%20Build%20Bot%20-%20Workflow%20Overview.pdf",
   },
   {
     index: "03",
