@@ -288,7 +288,7 @@ function Portfolio() {
 
         <section id="work" className="content-section">
           <div className="section-heading compact">
-            <div><SectionLabel>PREVIOUS WORKS</SectionLabel><h2>Selected projects.</h2></div>
+            <div><SectionLabel>PREVIOUS WORKS</SectionLabel><h2>My Highlighted Projects.</h2></div>
             <p>n8n automations and enterprise systems built around useful logic, accuracy, security, and dependable delivery.</p>
           </div>
           <div className="project-grid">
