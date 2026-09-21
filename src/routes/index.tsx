@@ -231,8 +231,9 @@ function Portfolio() {
             </div>
           </div>
           <div className="portrait-wrap">
-            <div className="portrait-halo" />
-            <img src={portrait} alt="John Raphael C. De Castro" />
+            <div className="portrait-halo">
+              <img src={portrait} alt="John Raphael C. De Castro" />
+            </div>
             <span className="portrait-caption">BASED IN THE PHILIPPINES · AVAILABLE WORLDWIDE</span>
           </div>
         </section>
