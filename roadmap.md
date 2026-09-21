@@ -13,4 +13,4 @@
 
 - [x] Refine the hero to match the supplied portrait-led structure and light sky-blue background
 - [x] Apply Sora and Manrope while preserving the existing portfolio content
-- [ ] Verify the refined portfolio on desktop and mobile
+- [x] Verify the refined portfolio on desktop and mobile
