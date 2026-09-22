@@ -104,22 +104,12 @@ const experience = [
     dates: "JUN 2017 — APR 2021",
     role: "Associate Software Engineer",
     company: "Accenture",
-    groups: [
-      {
-        title: "Identity & Access Management",
-        details: [
-          "Developed Windows Hello for Business solutions using PowerShell and Azure DevOps.",
-          "Produced technical documentation and supported enterprise deployments.",
-        ],
-      },
-      {
-        title: "Marketing & Communications",
-        details: [
-          "Developed and maintained Sitecore web applications, including work supporting Accenture.com.",
-          "Supported Agile releases through debugging, pipeline monitoring, and production regression testing.",
-        ],
-      },
-    ],
+    details: [
+      "Developed Windows Hello for Business solutions using PowerShell and Azure DevOps.",
+      "Produced technical documentation and supported enterprise deployments.",        
+      "Developed and maintained Sitecore web applications, including work supporting Accenture.com.",
+      "Supported Agile releases through debugging, pipeline monitoring, and production regression testing.",
+    ],   
   },
 ];
 
