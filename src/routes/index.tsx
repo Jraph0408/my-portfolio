@@ -73,7 +73,7 @@ const services = [
 const experience = [
   {
     dates: "2026 — PRESENT",
-    role: "Workflow & AI Automation Builder",
+    role: "AI Workflow Specialist",
     company: "Independent Projects · n8n",
     details: [
       "Designing n8n workflows for operational intake, priority routing, duplicate prevention, and timed escalation.",
