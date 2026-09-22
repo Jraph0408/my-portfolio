@@ -14,3 +14,8 @@
 - [x] Refine the hero to match the supplied portrait-led structure and light sky-blue background
 - [x] Apply Sora and Manrope while preserving the existing portfolio content
 - [x] Verify the refined portfolio on desktop and mobile
+
+## New tasks (Sep 22)
+- [ ] Remove circles/lines around hero portrait, retain photo only
+- [ ] Make background color bluer
+- [ ] Make top header not move while scrolling (sticky/fixed)
