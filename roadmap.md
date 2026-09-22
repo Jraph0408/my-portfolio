@@ -19,3 +19,5 @@
 - [x] Remove circles/lines around hero portrait, retain photo only
 - [x] Make background color bluer
 - [x] Make top header not move while scrolling (sticky/fixed)
+- [x] Consolidate the two Accenture roles into one Associate Software Engineer entry
+- [x] Add the two completed n8n projects to the career highlights
