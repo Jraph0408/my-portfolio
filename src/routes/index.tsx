@@ -103,12 +103,22 @@ const experience = [
   {
     dates: "JUN 2017 — APR 2021",
     role: "Associate Software Engineer",
-    company: "Accenture · Identity & Access Management + Marketing & Communications",
-    details: [
-      "Developed Windows Hello for Business solutions using PowerShell and Azure DevOps.",
-      "Produced technical documentation and supported enterprise deployments.",
-      "Developed and maintained Sitecore web applications, including work supporting Accenture.com.",
-      "Supported Agile releases through debugging, pipeline monitoring, and production regression testing.",
+    company: "Accenture",
+    groups: [
+      {
+        title: "Identity & Access Management",
+        details: [
+          "Developed Windows Hello for Business solutions using PowerShell and Azure DevOps.",
+          "Produced technical documentation and supported enterprise deployments.",
+        ],
+      },
+      {
+        title: "Marketing & Communications",
+        details: [
+          "Developed and maintained Sitecore web applications, including work supporting Accenture.com.",
+          "Supported Agile releases through debugging, pipeline monitoring, and production regression testing.",
+        ],
+      },
     ],
   },
 ];
@@ -205,7 +215,7 @@ function Portfolio() {
           <a href="#work">Work</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a className="availability" href="mailto:jraph5295@gmail.com">
+        <a className="availability" href="https://www.linkedin.com/in/john-raphael-de-castro/" target="_blank" rel="noreferrer">
           <span /> Open to opportunities
         </a>
       </header>
@@ -220,7 +230,7 @@ function Portfolio() {
             </p>
             <div className="hero-actions">
               <a className="primary-action" href="#work">View my work <ArrowDown aria-hidden="true" /></a>
-              <a className="secondary-action" href="mailto:jraph5295@gmail.com">Let&apos;s talk <ArrowUpRight aria-hidden="true" /></a>
+              <a className="secondary-action" href="https://calendly.com/jraph5295/30min" target="_blank" rel="noreferrer">Let&apos;s talk <ArrowUpRight aria-hidden="true" /></a>
             </div>
           </div>
           <div className="portrait-wrap">
@@ -273,7 +283,18 @@ function Portfolio() {
                   <p className="job-date">{job.dates}</p>
                   <h3>{job.role}</h3>
                   <p className="company">{job.company}</p>
-                  <ul>{job.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+                  {"groups" in job && job.groups ? (
+                    <div className="job-groups">
+                      {job.groups.map((group) => (
+                        <div className="job-group" key={group.title}>
+                          <p className="job-group-title">{group.title}</p>
+                          <ul>{group.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <ul>{job.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+                  )}
                 </li>
               ))}
             </ol>
