@@ -101,19 +101,12 @@ const experience = [
     ],
   },
   {
-    dates: "DEC 2019 — APR 2021",
+    dates: "JUN 2017 — APR 2021",
     role: "Associate Software Engineer",
-    company: "Accenture · Identity & Access Management",
+    company: "Accenture · Identity & Access Management + Marketing & Communications",
     details: [
       "Developed Windows Hello for Business solutions using PowerShell and Azure DevOps.",
       "Produced technical documentation and supported enterprise deployments.",
-    ],
-  },
-  {
-    dates: "JUN 2017 — DEC 2019",
-    role: "Associate Software Engineer",
-    company: "Accenture · Marketing & Communications",
-    details: [
       "Developed and maintained Sitecore web applications, including work supporting Accenture.com.",
       "Supported Agile releases through debugging, pipeline monitoring, and production regression testing.",
     ],
@@ -243,7 +236,7 @@ function Portfolio() {
           <div><strong>3+</strong><span>Years in development</span></div>
           <div><strong>20+</strong><span>Agile releases yearly</span></div>
           <div><strong>5</strong><span>QA engineers mentored</span></div>
-          <blockquote>“Quality is never an accident. It is always the result of intelligent effort.”</blockquote>
+          <div><strong>2</strong><span>n8n projects made</span></div>
         </section>
 
         <section id="services" className="content-section">
