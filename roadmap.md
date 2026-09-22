@@ -16,6 +16,6 @@
 - [x] Verify the refined portfolio on desktop and mobile
 
 ## New tasks (Sep 22)
-- [ ] Remove circles/lines around hero portrait, retain photo only
-- [ ] Make background color bluer
-- [ ] Make top header not move while scrolling (sticky/fixed)
+- [x] Remove circles/lines around hero portrait, retain photo only
+- [x] Make background color bluer
+- [x] Make top header not move while scrolling (sticky/fixed)
