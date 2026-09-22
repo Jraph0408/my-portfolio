@@ -106,14 +106,14 @@ const experience = [
     company: "Accenture",
     groups: [
       {
-        title: "Identity & Access Management",
+        title: "Accenture — Identity & Access Management",
         details: [
           "Developed Windows Hello for Business solutions using PowerShell and Azure DevOps.",
           "Produced technical documentation and supported enterprise deployments.",
         ],
       },
       {
-        title: "Marketing & Communications",
+        title: "Accenture — Marketing & Communications",
         details: [
           "Developed and maintained Sitecore web applications, including work supporting Accenture.com.",
           "Supported Agile releases through debugging, pipeline monitoring, and production regression testing.",
