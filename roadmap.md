@@ -25,3 +25,5 @@
 ## New tasks (Oct 6)
 - [x] Swap WebDriverIO for Playwright and add Automation Testing in the skills list
 - [x] Restore the two labelled Accenture sub-sections and clear the typecheck errors
+- [x] Restyle the page to the dark navy and electric-blue reference without changing wording
+- [x] Redesign the contact section to match the dark navy and electric-blue theme
