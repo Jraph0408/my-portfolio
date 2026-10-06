@@ -70,7 +70,13 @@ const services = [
   },
 ];
 
-const experience = [
+type ExperienceGroup = { title: string; details: string[] };
+
+type ExperienceRole =
+  | { dates: string; role: string; company: string; details: string[]; groups?: undefined }
+  | { dates: string; role: string; company: string; groups: ExperienceGroup[]; details?: undefined };
+
+const experience: ExperienceRole[] = [
   {
     dates: "2026 — PRESENT",
     role: "AI Workflow Specialist",
@@ -104,12 +110,22 @@ const experience = [
     dates: "JUN 2017 — APR 2021",
     role: "Associate Software Engineer",
     company: "Accenture",
-    details: [
-      "Developed Windows Hello for Business solutions using PowerShell and Azure DevOps.",
-      "Produced technical documentation and supported enterprise deployments.",        
-      "Developed and maintained Sitecore web applications, including work supporting Accenture.com.",
-      "Supported Agile releases through debugging, pipeline monitoring, and production regression testing.",
-    ],   
+    groups: [
+      {
+        title: "Accenture - Identity & Access Management",
+        details: [
+          "Developed Windows Hello for Business solutions using PowerShell and Azure DevOps.",
+          "Produced technical documentation and supported enterprise deployments.",
+        ],
+      },
+      {
+        title: "Accenture - Marketing & Communications",
+        details: [
+          "Developed and maintained Sitecore web applications, including work supporting Accenture.com.",
+          "Supported Agile releases through debugging, pipeline monitoring, and production regression testing.",
+        ],
+      },
+    ],
   },
 ];
 
@@ -172,10 +188,11 @@ const skills = [
   "JavaScript",
   "TypeScript",
   "Manual Testing",
+  "Automation Testing",
   "Regression Testing",
   "API Testing",
   "Jest",
-  "WebDriverIO",
+  "Playwright",
   "Appium",
   "Azure DevOps",
   "Postman",
@@ -273,7 +290,7 @@ function Portfolio() {
                   <p className="job-date">{job.dates}</p>
                   <h3>{job.role}</h3>
                   <p className="company">{job.company}</p>
-                  {"groups" in job && job.groups ? (
+                  {job.groups ? (
                     <div className="job-groups">
                       {job.groups.map((group) => (
                         <div className="job-group" key={group.title}>

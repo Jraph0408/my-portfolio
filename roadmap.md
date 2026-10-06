@@ -21,3 +21,7 @@
 - [x] Make top header not move while scrolling (sticky/fixed)
 - [x] Consolidate the two Accenture roles into one Associate Software Engineer entry
 - [x] Add the two completed n8n projects to the career highlights
+
+## New tasks (Oct 6)
+- [x] Swap WebDriverIO for Playwright and add Automation Testing in the skills list
+- [x] Restore the two labelled Accenture sub-sections and clear the typecheck errors
