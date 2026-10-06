@@ -174,20 +174,42 @@ a { color: inherit; text-decoration: none; }
 .certs strong svg { width: 17px; color: var(--primary); }
 .certs p { color: var(--muted-foreground); line-height: 1.7; letter-spacing: 0; }
 
-.contact-wrap { background: var(--deep); color: var(--primary-foreground); padding: 92px max(24px, calc((100vw - 1240px) / 2)) 28px; }
+.contact-wrap {
+  position: relative; overflow: hidden; color: var(--foreground);
+  background:
+    radial-gradient(ellipse 70% 90% at 12% 0%, color-mix(in oklab, var(--glow) 26%, transparent), transparent 60%),
+    radial-gradient(ellipse 60% 80% at 92% 88%, color-mix(in oklab, var(--primary) 20%, transparent), transparent 55%),
+    linear-gradient(180deg, color-mix(in oklab, var(--background) 88%, black), color-mix(in oklab, var(--background) 70%, black));
+  border-top: 1px solid color-mix(in oklab, var(--primary) 26%, transparent);
+  padding: 108px max(24px, calc((100vw - 1240px) / 2)) 30px;
+}
 .contact-inner { display: grid; grid-template-columns: 1.15fr .85fr; gap: 80px; align-items: center; }
-.contact-wrap .section-label { color: color-mix(in oklab, var(--primary-foreground) 58%, transparent); }
-.contact-wrap h2 { margin-top: 18px; font-size: clamp(46px, 6vw, 80px); line-height: .88; font-weight: 530; }
-.contact-inner > div > p { max-width: 540px; color: color-mix(in oklab, var(--primary-foreground) 62%, transparent); line-height: 1.7; }
-.contact-card { background: color-mix(in oklab, var(--primary-foreground) 8%, transparent); border-color: color-mix(in oklab, var(--primary-foreground) 14%, transparent); border-radius: var(--radius); padding: 26px; }
-.contact-card > a { display: grid; grid-template-columns: 36px 1fr 18px; gap: 12px; align-items: center; padding: 18px 0; border-bottom: 1px solid color-mix(in oklab, var(--primary-foreground) 14%, transparent); font-size: 13px; }
+.contact-wrap .section-label { color: var(--muted-foreground); }
+.contact-wrap h2 { margin-top: 18px; font-size: clamp(46px, 6vw, 80px); line-height: .88; font-weight: 600; color: var(--foreground); }
+.contact-wrap h2 em { color: var(--accent); text-shadow: 0 0 46px color-mix(in oklab, var(--glow) 60%, transparent); }
+.contact-inner > div > p { max-width: 540px; color: var(--muted-foreground); line-height: 1.7; }
+.contact-card {
+  position: relative; overflow: hidden; padding: 28px;
+  border-radius: calc(var(--radius) + 6px);
+  background: linear-gradient(160deg, color-mix(in oklab, var(--primary) 14%, var(--glass-strong)), var(--glass-strong));
+  border: 1px solid color-mix(in oklab, var(--primary) 32%, transparent);
+  box-shadow: 0 34px 80px color-mix(in oklab, var(--glow) 24%, transparent), inset 0 1px 0 oklch(1 0 0 / .07);
+}
+.contact-card::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 100% 0%, color-mix(in oklab, var(--glow) 24%, transparent), transparent 62%); }
+.contact-card > span { position: relative; display: flex; align-items: center; gap: 12px; margin-bottom: 8px; letter-spacing: .16em; }
+.contact-card > span::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, color-mix(in oklab, var(--primary) 45%, transparent), transparent); }
+.contact-card > a { position: relative; display: grid; grid-template-columns: 46px 1fr 20px; gap: 14px; align-items: center; margin: 0 -14px; padding: 16px 14px; border-bottom: 1px solid color-mix(in oklab, var(--foreground) 10%, transparent); font-size: 13px; border-radius: 12px; transition: background .25s ease, transform .25s ease; }
 .contact-card > a:last-child { border-bottom: 0; }
-.contact-card a > svg:first-child { color: var(--primary); width: 19px; }
-.contact-card a > svg:last-child { width: 14px; opacity: .5; transition: transform .2s ease; }
-.contact-card a:hover > svg:last-child { transform: translate(2px, -2px); }
-.contact-card small { display: block; margin-bottom: 4px; color: color-mix(in oklab, var(--primary-foreground) 45%, transparent); font-family: var(--font-mono); font-size: 8px; }
-.footer-line { margin-top: 76px; border-top: 1px solid color-mix(in oklab, var(--primary-foreground) 12%, transparent); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; }
-.footer-line p { font-family: var(--font-mono); font-size: 9px; color: color-mix(in oklab, var(--primary-foreground) 46%, transparent); }
+.contact-card > a:hover { background: color-mix(in oklab, var(--primary) 14%, transparent); transform: translateX(4px); }
+.contact-icon { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 13px; color: var(--accent); background: color-mix(in oklab, var(--primary) 16%, transparent); border: 1px solid color-mix(in oklab, var(--primary) 34%, transparent); box-shadow: inset 0 0 20px color-mix(in oklab, var(--glow) 26%, transparent); }
+.contact-icon svg { width: 19px; height: 19px; }
+.contact-arrow { width: 15px; height: 15px; color: var(--muted-foreground); transition: transform .2s ease, color .2s ease; }
+.contact-card > a:hover .contact-arrow { color: var(--accent); transform: translate(3px, -3px); }
+.contact-card small { display: block; margin-bottom: 4px; color: var(--muted-foreground); font-family: var(--font-mono); font-size: 8px; letter-spacing: .14em; }
+.contact-value { min-width: 0; overflow-wrap: anywhere; }
+.footer-line { margin-top: 82px; padding-top: 26px; border-top: 1px solid color-mix(in oklab, var(--primary) 18%, transparent); display: flex; justify-content: space-between; align-items: center; }
+.footer-line .wordmark { color: var(--foreground); }
+.footer-line p { font-family: var(--font-mono); font-size: 9px; color: var(--muted-foreground); }
 
 @media (prefers-reduced-motion: no-preference) {
   .hero-copy, .portrait-wrap { animation: reveal .8s ease both; }
@@ -240,8 +262,11 @@ a { color: inherit; text-decoration: none; }
   .contact-wrap { padding: 72px 20px 24px; }
   .contact-wrap h2 { font-size: 45px; }
   .contact-inner { gap: 44px; }
-  .contact-card { padding: 20px; }
-  .contact-card > a { grid-template-columns: 30px minmax(0, 1fr) 14px; font-size: 11px; }
+  .contact-card { padding: 18px; }
+  .contact-card > a { grid-template-columns: 38px minmax(0, 1fr) 14px; gap: 11px; margin: 0 -8px; padding: 13px 8px; font-size: 11px; }
+  .contact-icon { width: 38px; height: 38px; border-radius: 11px; }
+  .contact-icon svg { width: 16px; height: 16px; }
+  .contact-arrow { width: 13px; height: 13px; }
   .footer-line { align-items: flex-start; gap: 18px; flex-direction: column; margin-top: 55px; }
 }
 .hero h1 { font-weight: 700; }
